@@ -101,6 +101,7 @@ console.log(createStudent("Sam", 10, 2.9));
 function findByName(students, targetName) {
   // TODO: use .find() to search by name
   // Hint: .find() returns undefined if nothing matches — convert that to null using || (or) operator
+  return students.find((student) => student.name === targetName) || null;
 }
 
 // Test your function — uncomment when ready:
@@ -108,6 +109,10 @@ function findByName(students, targetName) {
 // console.log(findByName(students, "ChenZee"));
 // console.log(findByName(students, "Jane"));
 // console.log(findByName(students, "Marcus"));
+
+console.log(findByName(students, "ChenZee"));
+console.log(findByName(students, "Jane"));
+console.log(findByName(students, "Marcus"));
 
 // =================================================================
 // PROBLEM 4 — Roster Report
@@ -125,8 +130,11 @@ function findByName(students, targetName) {
 function printRoster(students) {
   // TODO: loop through students with .forEach()
   // TODO: print each student in the format above
+  students.forEach((nilsi) =>
+    console.log(nilsi.grade + " " + nilsi.name + " - GPA: " + nilsi.gpa),
+  );
 }
-
+console.log(printRoster(students));
 // Test your function — uncomment when ready:
 // console.log("\n--- Problem 4 ---");
 // printRoster(students);
